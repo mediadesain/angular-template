@@ -5,12 +5,12 @@ import { NavbarComponent } from './components/navbar.component';
 import { DyamicTitlebarService } from './services/dynamic-titlebar.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'mds-root',
   template: `
   <div style="max-width: 900px; margin: 0 auto;">
-    <app-navbar></app-navbar>
+    <mds-navbar></mds-navbar>
       <div class="render-content"><router-outlet></router-outlet></div>
-    <app-footer></app-footer>
+    <mds-footer></mds-footer>
   </div>`,
   standalone: true,
   imports: [RouterOutlet, NavbarComponent, FooterComponent],

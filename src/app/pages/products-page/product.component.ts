@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { ProductModelList, ProductsMocakupData } from './products-mockup';
 
 @Component({
-  selector: 'app-product',
+  selector: 'mds-product',
   template: `<div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 1em">
     <div *ngFor="let item of data | keyvalue" style="width: 33.33%; margin-bottom: 1.5em; text-align: center">
       <!-- {{item.key}} -->

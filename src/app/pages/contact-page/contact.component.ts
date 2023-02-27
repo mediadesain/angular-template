@@ -3,7 +3,7 @@ import { JsonPipe, NgIf } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'mds-contact',
   template: `<p>Contact</p>
   <form #isiForm="ngForm" (ngSubmit)="kirim(isiForm)">
     <div>
@@ -29,7 +29,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   
-  kirim(isi: NgForm){
+  kirim(isi: NgForm): void {
     alert(JSON.stringify(isi.value))
     console.log(isi)
   }

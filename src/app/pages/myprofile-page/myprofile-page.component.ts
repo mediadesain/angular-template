@@ -3,7 +3,7 @@ import { JsonPipe, KeyValuePipe, NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-myprofile',
+  selector: 'mds-myprofile',
   template: `<p>Profile</p>
   <form #isiForm="ngForm" (ngSubmit)="kirim(isiForm.value)">
     <div>
@@ -76,17 +76,17 @@ export class MyProfileComponent {
     }
   };
 
-  removeItem(id: string){
+  removeItem(id: string): void {
     delete this.data.hobbies[id]
   }
-  addItem(name: string, label: string){
+  addItem(name: string, label: string): void {
     const generateId = JSON.stringify(new Date().getTime());
     Object.assign(this.data.hobbies, 
       {  [generateId] : { id: generateId, name: name, label: label } }
     );
   }
 
-  kirim(isi: ProfileModel){
+  kirim(isi: ProfileModel): void {
     alert(JSON.stringify(isi))
     console.log(isi)
   }

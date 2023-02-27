@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-services-nav',
+  selector: 'mds-services-nav',
   standalone: true,
   imports: [RouterModule],
   template: `

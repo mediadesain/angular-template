@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductModel, ProductsMocakupData } from './products-mockup';
 
 @Component({
-  selector: 'app-product',
+  selector: 'mds-product',
   template: `<h3>{{data?.name}}</h3>
   <img [src]="data?.picture" width="200px"/>
   <pre>{{data|json}}</pre>`,
