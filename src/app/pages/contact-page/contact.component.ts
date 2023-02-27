@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CommonModule, JsonPipe, NgIf } from '@angular/common';
-import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { JsonPipe, NgIf } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',

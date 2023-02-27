@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule, JsonPipe, KeyValuePipe, NgFor, NgIf } from '@angular/common';
-import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { JsonPipe, KeyValuePipe, NgFor, NgIf } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-myprofile',
   template: `<p>Profile</p>
-  <form #isiForm="ngForm" (ngSubmit)="kirim(isiForm)">
+  <form #isiForm="ngForm" (ngSubmit)="kirim(isiForm.value)">
     <div>
       <input type="name" placeholder="name *" name="username" [(ngModel)]="data.username" #username="ngModel" required>
       <small *ngIf="username.touched && username.errors?.['required']"> This input is required</small>
@@ -86,8 +86,8 @@ export class MyProfileComponent {
     );
   }
 
-  kirim(isi: any){
-    alert(JSON.stringify(isi.value))
+  kirim(isi: ProfileModel){
+    alert(JSON.stringify(isi))
     console.log(isi)
   }
 
