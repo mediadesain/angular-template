@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { FooterComponent } from './components/footer.component';
 import { NavbarComponent } from './components/navbar.component';
 import { DyamicTitlebarService } from './services/dynamic-titlebar.service';
@@ -18,6 +19,6 @@ import { DyamicTitlebarService } from './services/dynamic-titlebar.service';
 })
 export class AppComponent {
   constructor(private dynamictitle: DyamicTitlebarService){
-
+    console.log('envy', environment)
   }
 }
