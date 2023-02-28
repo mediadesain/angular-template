@@ -21,7 +21,7 @@ export class ProductDetailComponent {
       const param = params.get('detailurl');
       if(param){
         this.data = ProductsMocakupData.data[param];
-        if (!this.data) this.router.navigate(['products'])
+        if (!this.data) this.router.navigate(['products/not-found'])
       }
     });
   }
